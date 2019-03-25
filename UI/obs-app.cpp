@@ -38,6 +38,7 @@
 #include "qt-wrappers.hpp"
 #include "obs-app.hpp"
 #include "window-basic-main.hpp"
+#include "window-simple-main.hpp"
 #include "window-basic-settings.hpp"
 #include "crash-report.hpp"
 #include "platform.hpp"
@@ -1281,7 +1282,13 @@ bool OBSApp::OBSInit()
 
 	setQuitOnLastWindowClosed(false);
 
-	mainWindow = new OBSBasic();
+	bool simple = Mentor::setting_get(QStringLiteral("SIMPLE"), true).toBool();
+	if (simple) {
+		mainWindow = new OBSSimple();
+	}
+	else {
+		mainWindow = new OBSBasic();
+	}
 
 	mainWindow->setAttribute(Qt::WA_DeleteOnClose, true);
 	connect(mainWindow, SIGNAL(destroyed()), this, SLOT(quit()));

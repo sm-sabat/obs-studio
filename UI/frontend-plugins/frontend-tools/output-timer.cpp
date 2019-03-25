@@ -301,6 +301,7 @@ extern "C" void InitOutputTimer()
 {
 	QAction *action = (QAction*)obs_frontend_add_tools_menu_qaction(
 			obs_module_text("OutputTimer"));
+	action->setObjectName("OutputTimer");
 
 	obs_frontend_push_ui_translation(obs_module_get_string);
 

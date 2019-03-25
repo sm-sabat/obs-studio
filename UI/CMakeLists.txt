@@ -183,6 +183,8 @@ set(obs_SOURCES
 	window-dock.cpp
 	api-interface.cpp
 	window-basic-main.cpp
+	window-simple-tools.cpp
+	window-simple-main.cpp
 	window-basic-stats.cpp
 	window-basic-filters.cpp
 	window-basic-settings.cpp
@@ -203,6 +205,7 @@ set(obs_SOURCES
 	window-basic-transform.cpp
 	window-basic-preview.cpp
 	window-basic-about.cpp
+	window-simple-about.cpp
 	window-namedialog.cpp
 	window-log-reply.cpp
 	window-projector.cpp
@@ -240,6 +243,7 @@ set(obs_HEADERS
 	window-dock.hpp
 	window-main.hpp
 	window-basic-main.hpp
+	window-simple-main.hpp
 	window-basic-stats.hpp
 	window-basic-filters.hpp
 	window-basic-settings.hpp
@@ -249,6 +253,7 @@ set(obs_HEADERS
 	window-basic-main-outputs.hpp
 	window-basic-source-select.hpp
 	window-basic-about.hpp
+	window-simple-about.hpp
 	window-basic-status-bar.hpp
 	window-basic-adv-audio.hpp
 	window-basic-transform.hpp
@@ -303,7 +308,8 @@ set(obs_UI
 	forms/OBSBasicInteraction.ui
 	forms/OBSUpdate.ui
 	forms/OBSRemux.ui
-	forms/OBSAbout.ui)
+	forms/OBSAbout.ui
+	forms/MentorAbout.ui)
 
 set(obs_QRC
 	forms/obs.qrc)

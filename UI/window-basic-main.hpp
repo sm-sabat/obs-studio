@@ -121,6 +121,7 @@ class OBSBasic : public OBSMainWindow {
 	friend class AutoConfig;
 	friend class AutoConfigStreamPage;
 	friend struct OBSStudioAPI;
+	friend class OBSSimple;
 
 	enum class MoveDir {
 		Up,
