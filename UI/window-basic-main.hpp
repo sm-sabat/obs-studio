@@ -306,7 +306,7 @@ private:
 	void ToggleVolControlLayout();
 	void ToggleMixerLayout(bool vertical);
 
-	void RefreshSceneCollections();
+	virtual void RefreshSceneCollections();
 	void ChangeSceneCollection();
 	void LogScenes();
 
@@ -315,7 +315,7 @@ private:
 	bool AddProfile(bool create_new, const char *title, const char *text,
 			const char *init_text = nullptr, bool rename = false);
 	void DeleteProfile(const char *profile_name, const char *profile_dir);
-	void RefreshProfiles();
+	virtual void RefreshProfiles();
 	void ChangeProfile();
 	void CheckForSimpleModeX264Fallback();
 

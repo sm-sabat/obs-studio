@@ -4,7 +4,6 @@
 #include <QDesktopServices>
 #include <QUrl>
 #include <QLocale>
-#include <QDebug>
 
 #include "obs-app.hpp"
 

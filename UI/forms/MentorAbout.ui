@@ -91,6 +91,13 @@
      </widget>
     </item>
     <item>
+     <widget class="QLabel" name="mentor_info">
+      <property name="text">
+       <string>Mentor.Info</string>
+      </property>
+     </widget>
+    </item>
+    <item>
      <widget class="QTextBrowser" name="textBrowser"/>
     </item>
     <item>

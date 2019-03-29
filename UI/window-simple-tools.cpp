@@ -2,10 +2,14 @@
 
 using namespace Mentor;
 
+const QString Mentor::static_name = QStringLiteral("Mentor");
+
 QSettings settings(QStringLiteral("Mentor"), QStringLiteral("PremierOBS"));
 
 QVariant Mentor::setting_get(const QString& key, const QVariant& defaultValue)
 {
+	if (settings.value(key) == QVariant())
+		setting_set(key, defaultValue);
 	return settings.value(key, defaultValue);
 }
 

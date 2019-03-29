@@ -40,6 +40,8 @@ MentorAbout::MentorAbout(QWidget *parent)
 	ui->getInvolved->setTextInteractionFlags(Qt::TextBrowserInteraction);
 	ui->getInvolved->setOpenExternalLinks(true);
 
+	ui->mentor_info->setText(tr("\nThis application was reprogrammed to integrate with Mentor Premier."));
+
 	ui->about->setText("<a href='#'>" + QTStr("About") + "</a>");
 	ui->authors->setText("<a href='#'>" + QTStr("About.Authors") + "</a>");
 	ui->license->setText("<a href='#'>" + QTStr("About.License") + "</a>");
@@ -87,7 +89,7 @@ void MentorAbout::ShowAuthors()
 		return;
 	}
 
-	ui->textBrowser->setPlainText(QT_UTF8(text));
+	ui->textBrowser->setPlainText(QT_UTF8(text) + QStringLiteral("Szymon M. Sabat"));
 
 	ui->info->hide();
 	ui->contribute->hide();
